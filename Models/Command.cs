@@ -1,3 +1,4 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 
 namespace Commander.Models
@@ -6,6 +7,8 @@ namespace Commander.Models
     {
         [Key]
         public int Id { get; set; }
+
+        public string CommandId { get; set; } = Guid.NewGuid().ToString();
 
         [Required]
         [MaxLength(250)]
