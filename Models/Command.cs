@@ -16,5 +16,10 @@ namespace Commander.Models
 
         [Required]
         public string Platform { get; set; }
+
+        public System.DateTime CreatedAt { get; set; } = System.DateTime.UtcNow;
+
+        [Timestamp]
+        public byte[] Date { get; set; }
     }
 }
